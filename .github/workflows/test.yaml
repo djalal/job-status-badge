@@ -22,6 +22,7 @@ jobs:
           left_text: "hello"
           right_text: "world"
           color: "blue"
+          public_id: "custom-label-test"
       - name: Get the label
         run: |
           echo "pushed new label on ${{ steps.label.outputs.secure_url }}"
