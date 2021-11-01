@@ -7,9 +7,6 @@ echo RIGHT_TEXT=$INPUT_RIGHT_TEXT
 echo COLOR=$INPUT_COLOR
 echo PUBLIC_ID=$INPUT_PUBLIC_ID
 
-python3 -V
-pip3 install cloudinary-cli
-
 BADGE_URI=${LEFT_TEXT}-${RIGHT_TEXT}-${COLOR}
 
 cloudinary uploader upload https://img.shields.io/badge/$BADGE_URI public_id=$PUBLIC_ID resource_type=image > result.json
