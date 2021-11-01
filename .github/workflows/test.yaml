@@ -3,7 +3,7 @@ on: [push]
 jobs:
   local_test:
     runs-on: ubuntu-latest
-    name: Local test with act
+    name: Self test
     steps:
       - name: Push custom label
         uses: djalal/job-status-badge@main # Uses an action in the root directory
@@ -14,4 +14,7 @@ jobs:
           right_text: "world"
           color: "blue"
       - name: Get the label
-        run: echo "pushed new label on ${{ steps.label.outputs.url }}"
+        run: |
+          echo "pushed new label on ${{ steps.label.outputs.secure_url }}"
+          echo "pushed public id = ${{ steps.label.outputs.public_id }}"
+          echo "pushed image bytes = ${{ steps.label.outputs.bytes }}"

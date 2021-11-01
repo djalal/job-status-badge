@@ -13,10 +13,18 @@ inputs:
     required: true
   color:
     description: 'color of the right part of label'
+    required: false
+    default: green
+  color:
+    description: 'color of the right part of label'
     required: true
 outputs:
- url:
+ secure_url:
    description: 'url of uploaded label'
+ public_id:
+   description: 'public filename'
+ bytes:
+   description: 'weight of uploaded label'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -25,3 +33,4 @@ runs:
     - ${{ inputs.left_text }}
     - ${{ inputs.right_text }}
     - ${{ inputs.color }}
+    - ${{ inputs.public_id }}

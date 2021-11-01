@@ -7,7 +7,7 @@ echo RIGHT_TEXT=$INPUT_RIGHT_TEXT
 echo COLOR=$INPUT_COLOR
 echo PUBLIC_ID=$INPUT_PUBLIC_ID
 
-python -V
+python3 -V
 pip3 install cloudinary-cli
 
 BADGE_URI=${LEFT_TEXT}-${RIGHT_TEXT}-${COLOR}
