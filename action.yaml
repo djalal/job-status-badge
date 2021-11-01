@@ -15,6 +15,9 @@ inputs:
     description: 'color of the right part of label'
     required: false
     default: green
+  public_id:
+    description: 'desired name of the uploaded file'
+    required: false
 outputs:
  secure_url:
    description: 'url of uploaded label'
