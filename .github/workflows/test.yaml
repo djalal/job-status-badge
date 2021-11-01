@@ -6,7 +6,7 @@ jobs:
     name: Local test with act
     steps:
       - name: Push custom label
-        uses: ./ # Uses an action in the root directory
+        uses: djalal/job-status-badge@main # Uses an action in the root directory
         id: label
         with:
           cloudinary_url: ${{ secrets.CLOUDINARY_URL }}
