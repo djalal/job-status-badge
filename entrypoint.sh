@@ -12,6 +12,10 @@ echo --- DEBUG END --------------------------
 BADGE_URI=${INPUT_LEFT_TEXT}-${INPUT_RIGHT_TEXT}-${INPUT_COLOR}
 CLOUDINARY_URL=$INPUT_CLOUDINARY_URL
 
+env
+
+export CLOUDINARY_URL=$INPUT_CLOUDINARY_URL
+
 cloudinary config
 cloudinary uploader upload https://img.shields.io/badge/$BADGE_URI public_id=$PUBLIC_ID resource_type=image > result.json
 
