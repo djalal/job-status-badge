@@ -2,7 +2,7 @@ FROM alpine:latest
 
 RUN apk add --no-cache \
   bash \
-  python \
+  python3 \
   ca-certificates \
   curl \
   jq
