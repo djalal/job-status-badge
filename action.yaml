@@ -1,0 +1,27 @@
+# action.yaml
+name: 'Label for Job Status Github Action'
+description: 'Generate a label on a per-job level in Github Actions'
+inputs:
+  cloudinary_url:
+    description: 'cloudinary url with access token'
+    required: true
+  left_text:
+    description: 'text on the left part of label'
+    required: true
+  right_text:
+    description: 'text on the right part of label'
+    required: true
+  color:
+    description: 'color of the right part of label'
+    required: true
+outputs:
+ url:
+   description: 'url of uploaded label'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.cloudinary_url }}
+    - ${{ inputs.left_text }}
+    - ${{ inputs.right_text }}
+    - ${{ inputs.color }}

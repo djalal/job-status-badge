@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  local_test:
+    runs-on: ubuntu-latest
+    name: Local test with act
+    steps:
+      - name: Push custom label
+        uses: ./ # Uses an action in the root directory
+        id: label
+        with:
+          cloudinary_url: ${{ secrets.CLOUDINARY_URL }}
+          left_text: "hello"
+          right_text: "world"
+          color: "blue"
+      - name: Get the label
+        run: echo "pushed new label on ${{ steps.label.outputs.url }}"
