@@ -9,6 +9,7 @@ echo PUBLIC_ID=$INPUT_PUBLIC_ID
 
 BADGE_URI=${LEFT_TEXT}-${RIGHT_TEXT}-${COLOR}
 
+cloudinary config
 cloudinary uploader upload https://img.shields.io/badge/$BADGE_URI public_id=$PUBLIC_ID resource_type=image > result.json
 
 OUTPUT_PUBLIC_ID=`cat result.json  | jq ".public_id"`
