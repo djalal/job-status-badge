@@ -19,9 +19,9 @@ jobs:
         id: label
         with:
           cloudinary_url: ${{ secrets.CLOUDINARY_URL }}
-          left_text: "hello"
-          right_text: "world"
-          color: "blue"
+          left_text: "job-status-badge"
+          right_text: "build"
+          color: "green"
           public_id: "custom-label-test"
       - name: Get the label
         run: |
