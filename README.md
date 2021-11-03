@@ -3,7 +3,7 @@ custom action to host a status badge on a per-job basis
 
 [![build](https://res.cloudinary.com/djalal/custom-label-test.svg?refresh=true)](https://github.com/djalal/job-status-badge/actions/workflows/test.yaml)
 
-[![build2](https://res.cloudinary.com/djalal/left-right-blue.svg)](https://github.com/djalal/job-status-badge/actions/workflows/test.yaml)
+[![build2](https://res.cloudinary.com/djalal/left-right-blue.svg?foo=bar)](https://github.com/djalal/job-status-badge/actions/workflows/test.yaml)
 
 
 ## Description
