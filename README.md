@@ -1,10 +1,7 @@
 # job-status-badge
 custom action to host a status badge on a per-job basis 
 
-[![build](https://res.cloudinary.com/djalal/custom-label-test.svg?refresh=true)](https://github.com/djalal/job-status-badge/actions/workflows/test.yaml)
-
-[![build2](https://res.cloudinary.com/djalal/left-right-blue.svg?foo=bar)](https://github.com/djalal/job-status-badge/actions/workflows/test.yaml)
-
+[![build](https://res.cloudinary.com/djalal/custom-label-test)](https://github.com/djalal/job-status-badge/actions/workflows/test.yaml)
 
 ## Description
 Github Action has status badge for workflows. According to [official documentation](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge), generated labels cannot be filtered down to specific jobs. Some jobs will succeed, and other will fail, so sometimes we want a status badge for a specific job. 
