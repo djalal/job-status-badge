@@ -28,3 +28,16 @@ jobs:
           echo "pushed new label on ${{ steps.label.outputs.secure_url }}"
           echo "pushed public id = ${{ steps.label.outputs.public_id }}"
           echo "pushed image bytes = ${{ steps.label.outputs.bytes }}"
+
+  purge_camo_badges:
+    needs: local_test
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Purge badges from camo
+        run: |
+          curl -X PURGE https://camo.githubusercontent.com/2a937e859c3921b3d7c382acd3c25f68ac421aed5b0c270d77e825b7275cef21/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f646a616c616c2f637573746f6d2d6c6162656c2d74657374
+        
